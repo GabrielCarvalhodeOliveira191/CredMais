@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Login realizado</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='stylee.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <div class="pagina-sucesso">
+
+        <div class="card-sucesso">
+
+            <img
+                src="{{ url_for('static', filename='img/correto.png') }}"
+                alt="Sucesso"
+            >
+
+            <h1>
+                Login realizado com sucesso!
+            </h1>
+
+            <p>
+                Seja bem-vindo,
+                {{ session["usuario_nome"] }}!
+            </p>
+
+            <a
+                href="{{ url_for('sistema') }}"
+                class="botao"
+            >
+                Entrar no sistema
+            </a>
+
+            <a
+                href="{{ url_for('logout') }}"
+                class="botao"
+            >
+                Sair
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
